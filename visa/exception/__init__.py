@@ -16,7 +16,7 @@ class CustomException(Exception):
         return error_message
     #what is str and repro 
     def __str__(self):
-        return self.error_message
+        return self.error_message  
     
     def __repr__(self) -> str:
         return CustomException.__name__.str() 
