@@ -1,2 +1,2 @@
 <image.png>
-![Screenshot](image.png)
+![image.png](image.png)
