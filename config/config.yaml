@@ -1,5 +1,5 @@
 training_pipeline_config:
-  pipeline: US_VISA
+  pipeline: visa 
   artifact_dir : artifact 
 
 data_ingestion_config:
@@ -12,4 +12,5 @@ data_ingestion_config:
 data_validation_config:
   schema_dir: config
   schema_file_dir: schema.yaml 
+
 
