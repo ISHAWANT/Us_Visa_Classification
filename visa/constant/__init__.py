@@ -26,6 +26,12 @@ TRAINING_PIPELINE_CONFIG_KEY ="training_pipeline_config"
 TRAINING_PIPELINE_ARTIFACT_DIR_KEY = "artifact_dir"
 TRAINING_PIPELINE_NAME_KEY = "pipeline"
 
+#Company Variable 
+COLUMNS_COMPANY_AGE = 'company_age'
+COLUMNS_YEAR_ESTB = 'year_of_estb'
+COLUMN_ID = 'case_id' 
+
+
 #Data Validation related variable 
 
 #Data Transformation variable 
