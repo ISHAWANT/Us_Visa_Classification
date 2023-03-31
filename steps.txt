@@ -1,2 +1,5 @@
 config.yaml>>config entity>>constant.py>>artifact file>>configuration file>>data ingestion>>utils>>
-go back data ingestion>>utils(HELPER FUNCTION)>>go back data_ingestion>>pipeline>>demo.py>>run your first dir
+go back data ingestion>>utils(HELPER FUNCTION)>>go back data_ingestion>>pipeline>>demo2.py>>run your first dir
+
+schema.yaml>config.yaml>>config entity>>constant.py>>artifact file>>configuration file>>data Validation>>utils>>
+go back data Validation>>utils(HELPER FUNCTION)>>go back data_ingestion>>pipeline>>demo2.py>>run your first dir
