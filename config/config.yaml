@@ -9,6 +9,7 @@ data_ingestion_config:
   ingested_train_dir: train
   ingested_test_dir: test
 
+#DATA VALIDATION 
 data_validation_config:
   schema_dir: config
   schema_file_name: schema.yaml 
