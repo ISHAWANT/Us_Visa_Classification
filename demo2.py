@@ -1,6 +1,5 @@
 from visa.entity.config_entity import DataIngestionConfig 
 from visa.entity.artifact_entity import DataIngestionArtifact 
-# from visa.config.configuration import Configuartion 
 from visa.config.configuration import Configuration
 import os,sys 
 from visa.logger import logging 
