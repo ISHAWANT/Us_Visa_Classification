@@ -1,9 +1,9 @@
 training_pipeline_config:
-  pipeline: visa 
+  pipeline_name: visa 
   artifact_dir : artifact 
 
 data_ingestion_config:
-  dataset_download_url: https://github.com/ISHAWANT/Data_set/blob/main/Visadataset.csv
+  dataset_download_url: https://raw.githubusercontent.com/ISHAWANT/Data_set/main/Visadataset.csv 
   raw_data_dir : raw_data
   ingested_dir: ingested_data
   ingested_train_dir: train
