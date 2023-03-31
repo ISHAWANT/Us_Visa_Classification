@@ -5,3 +5,6 @@ DataIngestionConfig = namedtuple('DataIngestionConfig',['dataset_download_url','
 # after that we need to define above variable in constant from config.yaml
 
 TrainingPipelineConfig = namedtuple('TrainingPipelineConfig',['artifact_dir']) 
+
+#Data Validation 
+DataValidationConfig = namedtuple('DataValidationConfig',['Schema_file_path']) 
