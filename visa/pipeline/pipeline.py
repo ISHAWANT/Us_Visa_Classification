@@ -7,6 +7,11 @@ from visa.utils.utils import read_yaml_file
 from visa.components.data_ingestion import DataIngestion
 from visa.entity.artifact_entity import DataIngestionArtifact
 from visa.config.configuration import Configuration
+#data Validation
+from visa.components.data_ingestion import DataIngestion
+from visa.components.data_validation import DataValidationArtifact
+from visa.components.data_validation import DataValidation
+
 
 class Pipeline():
 
@@ -23,11 +28,24 @@ class Pipeline():
         except Exception as e:
             raise CustomException(e, sys) from e 
         
+# Data Validation 
+
+    def start_data_validation(self,data_ingestion_artifact:DataIngestionArtifact)->DataValidationArtifact:
+        try:
+            data_validation = DataValidation(data_validation_config=self.config.get_data_validation_config(),data_ingestion_artifact=data_ingestion_artifact)
+        except Exception as e:
+            raise CustomException(e,sys) from e 
+        
+        
     def run_pipeline(self):
         try:
             data_ingestion_artifact = self.start_data_ingestion()
+            #data Validation 
+            data_validation_artifact = self.start_data_validation(data_ingestion_artifact=data_ingestion_artifact)
         except Exception as e:
             raise CustomException(e,sys) from e 
+        
+        
         
             
             
