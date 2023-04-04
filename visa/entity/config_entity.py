@@ -7,4 +7,4 @@ DataIngestionConfig = namedtuple('DataIngestionConfig',['dataset_download_url','
 TrainingPipelineConfig = namedtuple('TrainingPipelineConfig',['artifact_dir']) 
 
 #Data Validation 
-DataValidationConfig = namedtuple('DataValidationConfig',['Schema_file_path']) 
+DataValidationConfig = namedtuple("DataValidationConfig", ["schema_file_path"])

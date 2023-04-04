@@ -63,5 +63,4 @@ class IngestedDataValidation:
             return True if (collections.Counter(df_column_names) == collections.Counter(schema_column_names)) else False
 
         except Exception as e:
-            raise CustomException(e,sys) from e 
-        
+            raise CustomException(e,sys) from e
