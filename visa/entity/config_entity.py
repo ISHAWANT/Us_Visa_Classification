@@ -8,3 +8,5 @@ TrainingPipelineConfig = namedtuple('TrainingPipelineConfig',['artifact_dir'])
 
 #Data Validation 
 DataValidationConfig = namedtuple("DataValidationConfig", ["schema_file_path"])
+
+
