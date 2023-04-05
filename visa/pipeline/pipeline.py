@@ -10,6 +10,9 @@ from visa.config.configuration import Configuration
 #data Validation
 from visa.components.data_ingestion import DataIngestion
 from visa.components.data_validation import DataValidationArtifact
+#data transformation
+from visa.components.data_transformation import DataTransformationArtifact
+from visa.components.data_transformation import DataTransformation
 from visa.components.data_validation import DataValidation
 
 
@@ -37,12 +40,27 @@ class Pipeline():
         except Exception as e:
             raise CustomException(e,sys) from e 
         
+    def satrt_data_transformation(self,data_ingestion_artifact:DataIngestionArtifact,
+                                  data_validation_artifact:DataValidationArtifact)->DataTransformationArtifact:
+        try:
+            data_transformation = DataTransformation(
+                data_transformation_config=self.config.get_data_transformation_config(),
+                data_ingestion_artifact=data_ingestion_artifact,
+                data_validation_artifact=data_validation_artifact
+            )
+            return data_transformation.initiate_data_transformation() 
+        except Exception as e:
+            raise CustomException(e,sys) from e 
         
+    
     def run_pipeline(self):                                                   
         try:
             data_ingestion_artifact = self.start_data_ingestion()
             #data Validation 
             data_validation_artifact = self.start_data_validation(data_ingestion_artifact=data_ingestion_artifact)
+            #Data Transformation 
+            data_transformation_artifact = self.satrt_data_transformation(data_ingestion_artifact=data_ingestion_artifact,
+                                                                          data_validation_artifact=data_validation_artifact)
         except Exception as e:
             raise CustomException(e,sys) from e 
 
