@@ -163,3 +163,5 @@ class Configuration:
             return training_pipeline_config
         except Exception as e:
             raise CustomException(e,sys) from e 
+        
+        
