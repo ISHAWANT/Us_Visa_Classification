@@ -11,7 +11,7 @@ from visa.constant import *
 from sklearn.pipeline import Pipeline 
 from sklearn.impute import SimpleImputer 
 from sklearn.preprocessing import StandardScaler,OrdinalEncoder,OneHotEncoder,PowerTransformer
-from imblearn.combine import SMOTTENN
+from imblearn.combine import SMOTEENN
 
 class DataTransformation:
     def __init__(self,data_transformation_config:DataTransformationConfig,
@@ -123,12 +123,12 @@ class DataTransformation:
             input_feature_train_arr = preprocessing_obj.fit_transform(input_feature_train_df)
             input_feature_test_arr = preprocessing_obj.transform(input_feature_test_df)
             
-            smt = SMOTTENN(random_state=42,sampling_strategy = 'all') 
+            smt = SMOTEENN(random_state=42,sampling_strategy = 'all') 
             input_feature_train_arr,target_feature_train_df = smt.fit_resample(input_feature_train_arr,target_feature_train_df)
             input_feature_test_arr,target_feature_test_df = smt.fit_resample(input_feature_test_arr,target_feature_test_df)
             
             train_arr = np.c_[input_feature_train_arr,np.array(target_feature_train_df)]
-            test_arr = np.c_[input_feature_train_arr,np.array(target_feature_test_df)]
+            test_arr = np.c_[input_feature_test_arr,np.array(target_feature_test_df)]
             
             transformed_train_dir = self.data_transformation_config.transformed_train_dir
             transformed_test_dir = self.data_transformation_config.transformed_test_dir 
@@ -162,4 +162,5 @@ class DataTransformation:
         
     def __del__(self):
         logging.info(f"{'>>'*30}Data Transformation log completed.{'<<'*30} \n\n")
+        
         
