@@ -14,6 +14,9 @@ from visa.components.data_validation import DataValidationArtifact
 from visa.components.data_transformation import DataTransformationArtifact
 from visa.components.data_transformation import DataTransformation
 from visa.components.data_validation import DataValidation
+#Model trainer
+from visa.components.model_trainer import ModelTrainer 
+from visa.entity.artifact_entity import ModelTrainerArtifact
 
 
 class Pipeline():
@@ -51,6 +54,16 @@ class Pipeline():
             return data_transformation.initiate_data_transformation() 
         except Exception as e:
             raise CustomException(e,sys) from e 
+        
+    #Model trainer 
+    def start_model_trainer(self,data_transformation_artifact:DataTransformationArtifact)->ModelTrainerArtifact:
+        try:
+            model_trainer = ModelTrainer(model_trainer_config=self.config.get_model_traineer_config(),
+                                         data_transformation_artifact=data_transformation_artifact)
+            return model_trainer.initiate_model_trainer()
+        
+        except Exception as e:
+            raise CustomException(e,sys) 
         
     
     def run_pipeline(self):                                                   
