@@ -121,4 +121,4 @@ class ModelTrainer:
         except Exception as e:
             raise CustomException(e,sys) from e 
     def __del__(self):
-        logging.info(f"{'>>'*30}Model trainer log completed.{'<<'*30}")``
+        logging.info(f"{'>>'*30}Model trainer log completed.{'<<'*30}")

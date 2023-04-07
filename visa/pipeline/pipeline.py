@@ -74,6 +74,9 @@ class Pipeline():
             #Data Transformation 
             data_transformation_artifact = self.satrt_data_transformation(data_ingestion_artifact=data_ingestion_artifact,
                                                                           data_validation_artifact=data_validation_artifact)
+            #Model trainer 
+            # model_trainer_artifact = self.start_model_trainer(data_transformation_artifact=data_transfromation_artifact)
+            model_trainer_artifact = self.start_model_trainer(data_transformation_artifact=data_transformation_artifact)
         except Exception as e:
             raise CustomException(e,sys) from e 
 
