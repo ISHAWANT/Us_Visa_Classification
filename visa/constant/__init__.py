@@ -34,14 +34,13 @@ COLUMN_YEAR_ESTB = "yr_of_estab"
 COLUMN_ID = "case_id"
 COLUMN_CASE_STATUS = "case_status"
 
+# Data Validation related variable
+DATA_VALIDATION_ARTIFACT_DIR="data_validation"
+DATA_VALIDATION_CONFIG_KEY = "data_validation_config"
+DATA_VALIDATION_SCHEMA_FILE_NAME_KEY = "schema_file_name"
+DATA_VALIDATION_SCHEMA_DIR_KEY = "schema_dir"
 
-#Data Validation related variable 
-DATA_VALIDATION_ARTIFACT_DIR = 'data_validation' 
-DATA_VALIDATION_CONFIG_KEY = 'data_validation_config'
-DATA_VALIDATION_SCHEMA_FILE_NAME_KEY = 'schema_file_name'
-DATA_VALIDATION_SCHEMA_DIR_KEY = 'schema_dir'
-
-#Data Transformation variable 
+# Data Transformation related variables
 DATA_TRANSFORMATION_CONFIG_KEY = "data_transformation_config"
 DATA_TRANSFORMATION_ARTIFACT_DIR = "data_transformation"
 DATA_TRANSFORMATION_DIR_NAME_KEY = "transformed_dir"
@@ -57,8 +56,8 @@ NUMERICAL_COLUMN_KEY = "Numerical_columns"
 ONE_HOT_COLUMN_KEY= "Onehot_columns"
 ORDINAL_COLUMN_KEY ="Oridnal_columns"
 TRANSFORM_COLUMN_KEY= "Transformation_columns"
-
-#Model training variable
+# Model Trainng Variable
+# Model Training related variables 
 MODEL_TRAINER_ARTIFACT_DIR = "model_trainer"
 MODEL_TRAINER_CONFIG_KEY = "model_trainer_config"
 MODEL_TRAINER_TRAINED_MODEL_DIR_KEY = "trained_model_dir"
@@ -67,14 +66,15 @@ MODEL_TRAINER_BASE_ACCURACY_KEY = "base_accuracy"
 MODEL_TRAINER_MODEL_CONFIG_DIR_KEY = "model_config_dir"
 MODEL_TRAINER_MODEL_CONFIG_FILE_NAME_KEY = "model_config_file_name"
 
-#Model Evaluation related variable 
+# Model Evaluatioin related variables
 MODEL_EVALUATION_CONFIG_KEY = "model_evaluation_config"
 MODEL_EVALUATION_FILE_NAME_KEY = "model_evaluation_file_name"
-MODEL_EVALUATION_ARTIFACT_DIR = "model_evaluation" 
+MODEL_EVALUATION_ARTIFACT_DIR = "model_evaluation"
 
-BEST_MODEL_KEY = 'best_model' 
-HISTORY_KEY = 'history'
-MODEL_PATH_KEY = "model_path" 
+BEST_MODEL_KEY = "best_model"
+HISTORY_KEY = "history"
+MODEL_PATH_KEY = "model_path"
 
-#Model Pusher Variable
-
+# Model Pusher config key
+MODEL_PUSHER_CONFIG_KEY = "model_pusher_config"
+MODEL_PUSHER_MODEL_EXPORT_DIR_KEY = "model_export_dir"
