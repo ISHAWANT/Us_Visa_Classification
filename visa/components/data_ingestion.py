@@ -1,18 +1,18 @@
-import sys 
-from visa.constant import * 
-from visa.logger import logging
-from visa.exception import CustomException
-from visa.entity.config_entity import * 
-from visa.utils.utils import read_yaml_file 
-from visa.entity.config_entity import DataIngestionConfig 
-from visa.entity.artifact_entity import DataIngestionArtifact 
-from visa.config.configuration import Configuration 
-from datetime import date 
-import pandas as pd 
-import numpy as np 
+import os
+import sys
 from six.moves import urllib
+import numpy as np
+import pandas as pd
+from visa.constant import *
+from visa.logger import logging
+from visa.entity.config_entity import DataIngestionConfig
+from visa.entity.artifact_entity import DataIngestionArtifact
+from visa.config.configuration import Configuartion
+from visa.exception import CustomException
+from visa.utils.utils import read_yaml_file
 from sklearn.model_selection import train_test_split
-
+from datetime import date
+            
 
 
 class DataIngestion:
