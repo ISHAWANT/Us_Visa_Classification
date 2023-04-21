@@ -371,4 +371,5 @@ class ModelFactory:
             return ModelFactory.get_best_model_from_grid_searched_best_model_list(grid_searched_best_model_list,
                                                                                   base_accuracy=base_accuracy)
         except Exception as e:
-            raise CustomException(e, sys)
+            raise CustomException(e,sys) from e 
+    

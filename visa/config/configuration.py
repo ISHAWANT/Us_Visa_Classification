@@ -151,6 +151,8 @@ class Configuration:
         except Exception as e:
             raise CustomException(e,sys) from e 
         
+    def get_model_pusher
+        
     
     def get_training_pipeline_config(self) ->TrainingPipelineConfig:
         try:

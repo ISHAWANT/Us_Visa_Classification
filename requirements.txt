@@ -2,4 +2,6 @@ flask
 numpy
 pandas
 PyYAML
+dill
+imblearn
 -e .
